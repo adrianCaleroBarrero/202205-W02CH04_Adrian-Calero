@@ -429,7 +429,7 @@ const RemoveDiv = () => {
 
 const anotherRound = () => {
     const valueStatus = (x) => x.status !== 0;
-    newPassWord.map(function (answer) {
+    newPassWord.forEach(function (answer) {
         if (answer.status === 0 && waitToCheck === false) {
             countQuestion = newPassWord.indexOf(answer);
             waitToCheck = true;
@@ -444,7 +444,7 @@ const anotherRound = () => {
 const timer = () => {
     let timer = document.querySelector('#timer');
     time = 180;
-    TimeRest = setInterval(function () {
+    let TimeRest = setInterval(function () {
         timer.innerHTML = time;
         time--;
         if (time === -1) {
